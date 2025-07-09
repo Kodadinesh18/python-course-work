@@ -1,46 +1,68 @@
-#A dictionary in Python is an ordered, mutable collection that stores key-value pairs.
+# Real-World Product Example: Spotify
+# Task 1: Taking inputs from the user
 
-#Syntax of a Dictionary:
-#dictionary_name = {key1: value1, key2: value2, key3: value3}
+# 1. User phone number (int)
+user_phonenumber = int(input("Enter your phone number: "))
 
-#creating a dictionary=
-student={"name":"Dinesh koda","Age":21,"gender":"M"}
-print(student)
-#output:{'name': 'Dinesh koda', 'Age': 21, 'gender': 'M'}
+# 2. App name (string)
+user_name = input("User name: ")
 
-#Accessing Values
-print(student["name"])#Dinesh koda
-print(student.get("name"))#->>most prefarable
+# 3. Monthly subscription price (float)
+monthly_subscription = float(input("Monthly subscription price: "))
 
-#Adding and updating:
-student["college"]="lendi"
-print(student)
-#output:{'name': 'Dinesh koda', 'Age': 21, 'gender': 'M', 'college': 'lendi'}
+# 4. Music languages (list)
+music_languages = input("Music languages (space-separated): ").split()
 
-#removing items:
-student.pop("Age")
-print(student)
-#removes last item:
-student.popitem()
-print(student)#{'name': 'Dinesh koda', 'gender': 'M'}
-#clear:
-student.clear()
-print(student)#{}
+# 5. Favourite artists (tuple)
+favourite_artists = tuple(input("Enter your favourite artists (comma-separated): ").split(','))
 
-#Dictionary Built-in Methods
-student={"name":"Dinesh koda","Age":21,"gender":"M"}
-print(student.keys())#dict_keys(['name', 'Age', 'gender'])
-print(student.values())#dict_values(['Dinesh koda', 21, 'M'])
-print(student.items())#dict_items([('name', 'Dinesh koda'), ('Age', 21), ('gender', 'M')])
+# 6. Premium features (set)
+premium_features = set(input("Premium features (coma-separated): ").split(','))
 
-#Dictionary Methods for Adding and Updating Data
-print(student.update({
-    "gender":"male","phone":347382
-}))
-print(student)#{'name': 'Dinesh koda', 'Age': 21, 'gender': 'male', 'phone': 347382}
-student.setdefault("city","unknown")
-print(student['city'])#unknown
+# 7. Downloaded songs with details (dictionary)
+downloaded_songs = eval(input("Songs with their details (dictionary format): "))
 
-#Dictionary Methods for Removing Data
-#pop:
-print(student.pop("Age"))
+# 8. Premium subscriber status (bool)
+premium_subscriber = bool(int(input("Premium subscriber? (1 for Yes, 0 for No): ")))
+
+
+# Sample Input Values:
+# Enter your phone number: 9876543210
+# User name: Dinesh-koda
+# Monthly subscription price: 129.9
+# Music languages (space-separated): English Hindi Telugu
+# Enter your favourite artists (comma-separated): Arijit Singh,SP Balasubrahmanyam,Taylor Swift
+# Premium features (comma-separated): Offline Play,High Quality Audio,Ad-Free
+# Songs with their details (dictionary format): {"Butta Bomma": {"Language": "Telugu", "Artist": "Armaan Malik", "Duration": "3:18"}, "Tum Hi Ho": {"Language": "Hindi", "Artist": "Arijit Singh", "Duration": "4:22"}, "Samajavaragamana": {"Language": "Telugu", "Artist": "Sid Sriram", "Duration": "3:44"}, "Shape of You": {"Language": "English", "Artist": "Ed Sheeran", "Duration": "4:24"}}
+# Premium subscriber? (1 for Yes, 0 for No): 1
+
+
+# Task 2: Display details using different formatting methods
+
+# 1. Comma-separated output
+print("User phone number:", user_phonenumber, "User name:", user_name, "Premium subscriber?:", premium_subscriber, sep=', ')
+#output:User phone number:, 9876543210, User name:, Dinesh-koda, Premium subscriber?:, True
+
+# 2. Percentage formatting (using % operator)
+print("Monthly Subscription: %.2f" % monthly_subscription)
+#output:Monthly Subscription: 129.90  
+
+# 3. Using f-strings (formatted string literals)
+print(f"Music languages: {music_languages}")
+print(f"Favourite artists: {favourite_artists}")
+print(f"Premium features: {premium_features}")
+'''output:
+Music languages: ['English,Hindi,Telugu']
+Favourite artists: ('Arijit Singh', 'SP Balasubrahmanyam', 'Taylor Swift')
+Premium features: {'High Quality Audio', 'Ad-Free', 'Offline Play'}''' 
+
+# 4. Using str.format() method
+print("Downloaded songs and details: {}".format(downloaded_songs))
+'''output:
+Downloaded songs and details:
+ {
+ 'Butta Bomma': {'Language': 'Telugu', 'Artist': 'Armaan Malik', 'Duration': '3:18'}, 
+'Tum Hi Ho': {'Language': 'Hindi', 'Artist': 'Arijit Singh', 'Duration': '4:22'},
+'Samajavaragamana': {'Language': 'Telugu', 'Artist': 'Sid Sriram', 'Duration': '3:44'},
+'Shape of You': {'Language': 'English', 'Artist': 'Ed Sheeran', 'Duration': '4:24'}
+}'''
