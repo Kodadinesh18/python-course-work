@@ -1,10 +1,10 @@
-# Real-World Product Example: Spotify
+# Real-World Example: Spotify
 # Task 1: Taking inputs from the user
 
 # 1. User phone number (int)
 user_phonenumber = int(input("Enter your phone number: "))
 
-# 2. App name (string)
+# 2. User name (string)
 user_name = input("User name: ")
 
 # 3. Monthly subscription price (float)

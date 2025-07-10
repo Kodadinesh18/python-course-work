@@ -50,5 +50,6 @@ set55.discard(7)#it doesnot throw an error
 print(set55.pop())
 print(set55)
 print(set55.pop())
-set55.update({1,2,34,5})
+set55.update({1,2,34,5})#add additional elements into the set
 print(set55)
+
