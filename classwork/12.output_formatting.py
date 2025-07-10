@@ -37,4 +37,5 @@ print(f"name:{name} age:{age} cgpa:{cgpa}")
 
 #str.format()method:
 print("Name: {} Age: {} cgpa: {}".format(name,age,cgpa))
+#output:Name: dinesh Age: 21 cgpa: 7.95
 
