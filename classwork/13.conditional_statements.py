@@ -78,5 +78,8 @@ elif n<0:
     print("it is a negative number!")
 elif n==0:
     print("it is zero!")
+'''output:
+enter the number: 26
+it is a positive number!'''
 
 
