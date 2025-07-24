@@ -205,13 +205,13 @@ while True:
 9. Retrieve the first and last message sent by a user1
 10. Check if a user is present in the chat
 11. Find commonly repeated words
-13. Identify the user with the longest average message length
-14. Count how many messages mention a specific user
-15. Remove duplicate messages
-16. Sort messages alphabetically
-17. Extract all questions asked in the chat
-18. Calculate the reply ratio between two users
-19. Check for deleted messages
+12. Identify the user with the longest average message length
+13. Count how many messages mention a specific user
+14. Remove duplicate messages
+15. Sort messages alphabetically
+16. Extract all questions asked in the chat
+17. Calculate the reply ratio between two users
+18. Check for deleted messages
 0. To Exit
 ''')
 
@@ -251,25 +251,25 @@ while True:
     elif choice == 11:
         repeated_words(chats)
 
-    elif choice == 13:
+    elif choice == 12:
         longest_avg_message(chats)
 
-    elif choice == 14:
+    elif choice == 13:
         mention_count(chats)
 
-    elif choice == 15:
+    elif choice == 14:
         remove_duplicates([msg for _, msg in chats])
 
-    elif choice == 16:
+    elif choice == 15:
         sort_messages([msg for _, msg in chats])
 
-    elif choice == 17:
+    elif choice == 16:
         extract_questions([msg for _, msg in chats])
 
-    elif choice == 18:
+    elif choice == 17:
         reply_ratio(chats)
 
-    elif choice == 19:
+    elif choice == 18:
         deleted_messages(chats)
 
     elif choice == 0:
