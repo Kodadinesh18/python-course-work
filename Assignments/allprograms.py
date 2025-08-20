@@ -1,15 +1,19 @@
-def power_of_number():
-    print("Program: Power of a Number")
+def kadane_algorithm():
+    print("Program: Kadane's Algorithm (Maximum Subarray Sum)")
     print('''\
-def power(base, exponent):
-    return base ** exponent
+def kadane(arr):
+    max_sum = current_sum = arr[0]
+    for x in arr[1:]:
+        current_sum = max(x, current_sum + x)
+        max_sum = max(max_sum, current_sum)
+    return max_sum
 
 # Test Cases
-print(power(2, 3))  # Output: 8
-print(power(5, 0))  # Output: 1
-print(power(7, 2))  # Output: 49
+print(kadane([-2, -3, 4, -1, -2, 1, 5, -3]))  # Output: 7
+print(kadane([1, 2, 3, -2, 5]))              # Output: 9
+print(kadane([-1, -2, -3, -4]))              # Output: -1
 ''')
-    print("Explanation: The function uses the exponentiation operator '**' to return the result of base raised to exponent.\n")
+    print("Explanation: Kadane’s Algorithm finds the maximum subarray sum by dynamically tracking the maximum sum ending at each position.\n")
 
 
 def factors_of_number():
@@ -62,18 +66,29 @@ print(strong_number(123))  # Output: False
     print("Explanation: A Strong number is one whose digits' factorial sum equals the number itself.\n")
 
 
-def perfect_number():
-    print("Program: Perfect Number")
+def merge_sorted_arrays():
+    print("Program: Merge 2 Sorted Arrays Without Using Extra Space")
     print('''\
-def perfect_number(n):
-    return n == sum(i for i in range(1, n) if n % i == 0)
+def merge(arr1, arr2):
+    n, m = len(arr1), len(arr2)
+    i, j = n - 1, 0
+    
+    # Swap elements to maintain sorted order
+    while i >= 0 and j < m and arr1[i] > arr2[j]:
+        arr1[i], arr2[j] = arr2[j], arr1[i]
+        i -= 1
+        j += 1
+    
+    # Sort both arrays individually
+    arr1.sort()
+    arr2.sort()
+    return arr1, arr2
 
 # Test Cases
-print(perfect_number(6))   # Output: True
-print(perfect_number(28))  # Output: True
-print(perfect_number(10))  # Output: False
+print(merge([1, 5, 9, 10, 15, 20], [2, 3, 8, 13]))  
+# Output: ([1, 2, 3, 5, 8, 9], [10, 13, 15, 20])
 ''')
-    print("Explanation: A Perfect number equals the sum of its proper divisors excluding itself.\n")
+    print("Explanation: Two sorted arrays are merged without using extra space by swapping elements and re-sorting them.\n")
 
 
 def perfect_square():

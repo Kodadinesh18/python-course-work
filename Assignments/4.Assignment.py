@@ -3,11 +3,11 @@ import allprograms
 
 # Mapping choices to functions
 all_programs = {
-    1: allprograms.power_of_number,
+    1: allprograms.kadane_algorithm,
     2: allprograms.factors_of_number,
     3: allprograms.prime_factors,
     4: allprograms.strong_number,
-    5: allprograms.perfect_number,
+    5: allprograms.merge_sorted_arrays,
     6: allprograms.perfect_square,
     7: allprograms.automorphic_number,
     8: allprograms.harshad_number,

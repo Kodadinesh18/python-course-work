@@ -15,3 +15,8 @@ class Instav2(Instagram, Instav1):
         print("Creating users from version 3")
 
 i = Instav2("Username-Mr_Dinnnu")
+
+
+# Username-Mr_Dinnnu user is defined parent-1
+# Username-Mr_Dinnnu user is created! parent-2
+# Creating users from version 3
